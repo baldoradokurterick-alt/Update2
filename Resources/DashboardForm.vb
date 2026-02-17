@@ -13,7 +13,7 @@
 
     Private Sub btnSaleSave_Click(sender As Object, e As EventArgs) Handles btnSaleSave.Click
         Dim sale As New Sale(CInt(txtSaleProductID.Text), CDec(txtSalePrice.Text), CDec(txtSaleDiscount.Text), txtSaleCategory.Text, CInt(txtSaleItemSold.Text), CInt(txtSaleStockLeft.Text))
-        If sale.Save() Then
+        If btnSaleSave() Then
             MessageBox.Show("Sale data saved successfully!")
         Else
             MessageBox.Show("Failed to save sale data.")
